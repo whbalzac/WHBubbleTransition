@@ -2,6 +2,7 @@
 自定义UIViewController Present样式，shrinking bubble收缩和扩张的泡沫
 
 >####开门见山，先看效果图：
+
 >![自定义转场动画.gif](http://upload-images.jianshu.io/upload_images/2963444-7b005d4295168826.gif?imageMogr2/auto-orient/strip)
 
 
@@ -14,6 +15,8 @@
 >###1. 把 swift 源码翻译成 OC
 
 >###2. 改进了一些动画机制，具体如下
+>
+>
 
 ![BubbleTransition效果图.gif](http://upload-images.jianshu.io/upload_images/2963444-d7ee7b456c1e6322.gif?imageMogr2/auto-orient/strip)
 
@@ -24,6 +27,8 @@
 #####但是。。
 聪明的你可能已经看见了，图中的两个 **ViewController** 背景就是纯色，上面没任何其他 **View**，所以显得效果很赞。接下来我们看一下加上 **View** 的效果——
 
+
+
 ![背景添加了一张图片.gif](http://upload-images.jianshu.io/upload_images/2963444-0a6473cb15fa4e3a.gif?imageMogr2/auto-orient/strip)
 
 
@@ -31,6 +36,9 @@
 这就尴尬了 a(￣3￣)a ——
 
 利用 **Reveal** 我们看看 **View** 的层次结构。
+
+
+
 ![Reveal结果.png](http://upload-images.jianshu.io/upload_images/2963444-5fec38cee034a6a8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/400)
 
 
