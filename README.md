@@ -1,7 +1,7 @@
 # WHBubbleTransition
 自定义UIViewController Present样式，shrinking bubble收缩和扩张的泡沫
 
->####开门见山，先看效果图：
+> #### 开门见山，先看效果图：
 
 
 ![自定义转场动画.gif](http://upload-images.jianshu.io/upload_images/2963444-7b005d4295168826.gif?imageMogr2/auto-orient/strip)
@@ -13,8 +13,8 @@
 
 对此进行了一些改进：
 
-###1. 把 swift 源码翻译成 OC
-###2. 改进了一些动画机制，具体如下
+### 1. 把 swift 源码翻译成 OC
+### 2. 改进了一些动画机制，具体如下
 
 ![BubbleTransition效果图.gif](http://upload-images.jianshu.io/upload_images/2963444-d7ee7b456c1e6322.gif?imageMogr2/auto-orient/strip)
 
@@ -22,7 +22,7 @@
 
 从它给的效果图来看，升缩的效果非常赞 （～￣▽￣～） ——
 
-#####但是。。
+##### 但是。。
 聪明的你可能已经看见了，图中的两个 **ViewController** 背景就是纯色，上面没任何其他 **View**，所以显得效果很赞。接下来我们看一下加上 **View** 的效果——
 
 
@@ -80,9 +80,9 @@ presentedControllerView.center = originalCenter;
 
 ````
 注释中解释了动画原因。主要的原理是View的层级关系，通过上层 ** bubble** 这个 **View**，慢慢变大，形成圆扩大的动画。但有一个前提是，下层的 **View**的背景色和** bubble**同色，混合之后，才能形成完整的动画，一旦下层 **View** 有“噪点”，这个动画就失效了。就像上面的gif展示的一样。
-####改进
+#### 改进
 既然原代码是通过上下层 **View** 来实现，那让咱们换个思路，只需要修改一点点代码就可以——
-#####iOS不是还有一个好玩的东西，叫做 maskView 的吗？
+##### iOS不是还有一个好玩的东西，叫做 maskView 的吗？
 ````
 CGPoint originalCenter = presentedControllerView.center;
 CGSize originalSize = presentedControllerView.frame.size;
